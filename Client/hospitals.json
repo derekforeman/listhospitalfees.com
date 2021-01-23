@@ -1,0 +1,22 @@
+{
+    "Hospitals": [
+      {
+        "Name": "Hospital Name",
+        "State": "OK",
+        "CSV" : "",
+        "HTML": "", 
+        "XML":"",
+        "TXT":"",
+        "XLX(S)":""
+      },
+      {
+        "Name": "Hospital 2",
+        "State": "WY",
+        "CSV" : "",
+        "HTML": "", 
+        "XML":"",
+        "TXT":"",
+        "XLX(S)":""
+      } 
+    ]
+  }
