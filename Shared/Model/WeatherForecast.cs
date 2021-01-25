@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorApp.Shared
+namespace ListHospitalFees.Shared.Model
 {
     public class WeatherForecast
     {
