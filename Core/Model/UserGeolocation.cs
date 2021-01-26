@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ListHospitalFees.Shared.Models
+namespace Core.Model
 {
     public class Language
     {

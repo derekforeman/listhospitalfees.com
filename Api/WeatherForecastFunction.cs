@@ -1,12 +1,11 @@
 using System;
 using System.Linq;
-using ListHospitalFees.Shared.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
-
+using Core.Model;
 
 namespace ListHospitalFees.Api
 {

@@ -1,10 +1,9 @@
 ﻿using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using ListHospitalFees.Shared.Model;
-using ListHospitalFees.Shared.Models;
+using Core.Model;
 
-namespace ListHospitalFees.Shared.Services
+namespace Core.Services
 {
     public class UserIpService : IUserIpService
     {

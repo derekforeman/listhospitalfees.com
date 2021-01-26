@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ListHospitalFees.Shared.Model
+namespace Core.Model
 {
     public class WeatherForecast
     {

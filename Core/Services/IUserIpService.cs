@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using ListHospitalFees.Shared.Model;
+using Core.Model;
 
-namespace ListHospitalFees.Shared.Services
+namespace Core.Services
 {
     public interface IUserIpService
     {

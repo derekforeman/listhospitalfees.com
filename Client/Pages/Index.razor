@@ -1,7 +1,67 @@
 ﻿@page "/"
+@using Core.Services;
 
-<h1>Hello, world!</h1>
+@inject IUserIpService _useripService
+@inject IIpStackService _ipService
 
-Welcome to your new app.
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Hospital</th>
+                    <th>CSV</th>
+                    <th>HTML</th>
+                    <th>XML</th>
+                    <th>TXT</th>
+                    <th>XLS(X)</th>
+                </tr>
+            </thead>
+            <tbody>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+                <tr>
+                    <td>
+                        IN
+                    </td>
+                    <td>
+                        IU Something
+                    </td>
+                    <td>CSV</td>
+                    <td>HTML</td>
+                    <td>XML</td>
+                    <td><a href="https://cdn.iuhealth.org/resources/2019-Charge-CMS-Transparency.txt ">TXT</a></td>
+                    <td>XLS(X)</td>
+                </tr>
+            <tr>
+                <td>
+                    MI
+                </td>
+                <td>
+                    U MICH
+                </td>
+                <td>CSV</td>
+                <td>HTML</td>
+                <td>XML</td>
+                <td><a href="https://umich.app.box.com/s/08fcxu0b3h14m3do2ej0xfbgfe2nwohg">TXT</a></td>
+                <td>XLS(X)</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <!-- /.row -->
+</div>
+
+
+@code{
+    IPAddress ipAddress = new IPAddress();
+    UserGeoLocation location = new UserGeoLocation();
+    protected override async Task OnInitializedAsync()
+    {
+        ipAddress = await _useripService.GetUserIPAsync();
+        @*location = await _ipService.GetLocationAsync(ipAddress.IP);*@
+    }
+}

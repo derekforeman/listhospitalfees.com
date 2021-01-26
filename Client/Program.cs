@@ -4,7 +4,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlazorApp.Client
+using Core.Services;
+
+namespace Client
 {
     public class Program
     {
@@ -16,6 +18,15 @@ namespace BlazorApp.Client
             var baseAddress = builder.Configuration["BaseAddress"] ?? builder.HostEnvironment.BaseAddress;
             builder.Services.AddScoped(_ => new HttpClient { BaseAddress = new Uri(baseAddress) });
 
+            builder.Services.AddHttpClient("IP", (options) => {
+                options.BaseAddress = new Uri("https://jsonip.com");
+            });
+            builder.Services.AddHttpClient("IpStack", options => {
+                options.BaseAddress = new Uri("http://api.ipstack.com");
+            });
+
+            builder.Services.AddTransient<IUserIpService, UserIpService>();
+            builder.Services.AddTransient<IIpStackService, IpStackService>();
             await builder.Build().RunAsync();
         }
     }

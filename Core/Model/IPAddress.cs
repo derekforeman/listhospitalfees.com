@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace ListHospitalFees.Shared.Model
+namespace Core.Model
 {
     public class IPAddress
     {
